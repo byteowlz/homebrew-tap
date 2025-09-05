@@ -5,21 +5,21 @@
 class Ppr < Formula
   desc "ppr - CLI tool for creating themed wallpapers from SVG templates"
   homepage "https://github.com/byteowlz/ppr"
-  version "1.0.8"
+  version "1.1.3"
   license "MIT"
 
   on_macos do
-    on_intel do
-      url "https://github.com/byteowlz/ppr/releases/download/1.0.8/ppr_1.0.8_darwin_amd64.tar.gz"
-      sha256 "eeb8988670263b7f99959fab01e98f096742478aa116719eb5d87f7f2d06ac60"
+    if Hardware::CPU.intel?
+      url "https://github.com/byteowlz/ppr/releases/download/1.1.3/ppr_1.1.3_darwin_amd64.tar.gz"
+      sha256 "b431f5a47a1e08ccb6b8dffb84aa5c1d442b4fecdcc8b067913647502bf34d9b"
 
       def install
         bin.install "ppr"
       end
     end
-    on_arm do
-      url "https://github.com/byteowlz/ppr/releases/download/1.0.8/ppr_1.0.8_darwin_arm64.tar.gz"
-      sha256 "d11657957bd4f821a1896879112b5c66881f04860e9583b2a7a19b9a61d0fded"
+    if Hardware::CPU.arm?
+      url "https://github.com/byteowlz/ppr/releases/download/1.1.3/ppr_1.1.3_darwin_arm64.tar.gz"
+      sha256 "da047ce1e6233dcf4b1bd3693ded4ce5270d5a5ebe3d868ea07b1a7e31e77760"
 
       def install
         bin.install "ppr"
@@ -28,24 +28,18 @@ class Ppr < Formula
   end
 
   on_linux do
-    on_intel do
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/byteowlz/ppr/releases/download/1.0.8/ppr_1.0.8_linux_amd64.tar.gz"
-        sha256 "c077939ac2ad1299421c13ea25c0f6acec3923357340fc70e32303e12203805f"
-
-        def install
-          bin.install "ppr"
-        end
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/byteowlz/ppr/releases/download/1.1.3/ppr_1.1.3_linux_amd64.tar.gz"
+      sha256 "b5663deab008ff43425cb5e3c64d72bd1313d23d0c299a6b62ca2952c2cfb035"
+      def install
+        bin.install "ppr"
       end
     end
-    on_arm do
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/byteowlz/ppr/releases/download/1.0.8/ppr_1.0.8_linux_arm64.tar.gz"
-        sha256 "21c78144c2e460e91064c5065a7f750556929c41cd2147eac18f0e0d88d6f1a8"
-
-        def install
-          bin.install "ppr"
-        end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/byteowlz/ppr/releases/download/1.1.3/ppr_1.1.3_linux_arm64.tar.gz"
+      sha256 "5b5141b51ef6198ac37be01fe5392779c7425f1bd840433761d154c3a709d820"
+      def install
+        bin.install "ppr"
       end
     end
   end
