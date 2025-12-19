@@ -5,21 +5,21 @@
 class Ppr < Formula
   desc "ppr - CLI tool for creating themed wallpapers from SVG templates"
   homepage "https://github.com/byteowlz/ppr"
-  version "1.1.3"
+  version "1.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/byteowlz/ppr/releases/download/1.1.3/ppr_1.1.3_darwin_amd64.tar.gz"
-      sha256 "b431f5a47a1e08ccb6b8dffb84aa5c1d442b4fecdcc8b067913647502bf34d9b"
+      url "https://github.com/byteowlz/ppr/releases/download/1.2.0/ppr_1.2.0_darwin_amd64.tar.gz"
+      sha256 "80b1e218e07273cd5bd32199eb86eb61cd83dd95d2bb339888b68a217d33bafe"
 
       def install
         bin.install "ppr"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/byteowlz/ppr/releases/download/1.1.3/ppr_1.1.3_darwin_arm64.tar.gz"
-      sha256 "da047ce1e6233dcf4b1bd3693ded4ce5270d5a5ebe3d868ea07b1a7e31e77760"
+      url "https://github.com/byteowlz/ppr/releases/download/1.2.0/ppr_1.2.0_darwin_arm64.tar.gz"
+      sha256 "9eec17ff1bb2cce02dd229086442bbacf5d50d3174f943128cd274699acf039e"
 
       def install
         bin.install "ppr"
@@ -29,15 +29,15 @@ class Ppr < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/byteowlz/ppr/releases/download/1.1.3/ppr_1.1.3_linux_amd64.tar.gz"
-      sha256 "b5663deab008ff43425cb5e3c64d72bd1313d23d0c299a6b62ca2952c2cfb035"
+      url "https://github.com/byteowlz/ppr/releases/download/1.2.0/ppr_1.2.0_linux_amd64.tar.gz"
+      sha256 "f8ed9ea5c6866fe85cc18a7bfbd9d7a356631b94ff5edfff9f8b133f645a381e"
       def install
         bin.install "ppr"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/byteowlz/ppr/releases/download/1.1.3/ppr_1.1.3_linux_arm64.tar.gz"
-      sha256 "5b5141b51ef6198ac37be01fe5392779c7425f1bd840433761d154c3a709d820"
+      url "https://github.com/byteowlz/ppr/releases/download/1.2.0/ppr_1.2.0_linux_arm64.tar.gz"
+      sha256 "99990ab17e6cffc5f89c2e539bf9b3a6e082313aadf0edfe31e611f6516ae7a9"
       def install
         bin.install "ppr"
       end
