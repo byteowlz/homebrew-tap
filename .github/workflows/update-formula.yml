@@ -1,0 +1,94 @@
+name: Update Formula
+
+on:
+  repository_dispatch:
+    types: [update-formula]
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Update formula
+        env:
+          FORMULA: ${{ github.event.client_payload.formula }}
+          VERSION: ${{ github.event.client_payload.version }}
+          REPO: ${{ github.event.client_payload.repo }}
+        run: |
+          set -e
+          VERSION_CLEAN="${VERSION#v}"
+          
+          # Download checksums
+          curl -sL "https://github.com/${REPO}/releases/download/${VERSION}/checksums.txt" -o checksums.txt
+          cat checksums.txt
+          
+          # Get SHA256 for each platform
+          SHA256_LINUX_X64=$(grep "x86_64-unknown-linux-gnu.tar.gz" checksums.txt | cut -d' ' -f1)
+          SHA256_LINUX_ARM64=$(grep "aarch64-unknown-linux-gnu.tar.gz" checksums.txt | cut -d' ' -f1)
+          SHA256_MACOS_X64=$(grep "x86_64-apple-darwin.tar.gz" checksums.txt | cut -d' ' -f1)
+          SHA256_MACOS_ARM64=$(grep "aarch64-apple-darwin.tar.gz" checksums.txt | cut -d' ' -f1)
+          
+          # Capitalize first letter of formula name for class
+          FORMULA_CLASS="$(echo ${FORMULA} | sed 's/./\U&/')"
+          
+          # Get description from repo
+          DESCRIPTION=$(curl -s "https://api.github.com/repos/${REPO}" | jq -r '.description // "A Byteowlz tool"')
+          
+          cat > "Formula/${FORMULA}.rb" << EOF
+          # typed: false
+          # frozen_string_literal: true
+          
+          class ${FORMULA_CLASS} < Formula
+            desc "${DESCRIPTION}"
+            homepage "https://github.com/${REPO}"
+            version "${VERSION_CLEAN}"
+            license "MIT"
+          
+            on_macos do
+              if Hardware::CPU.intel?
+                url "https://github.com/${REPO}/releases/download/${VERSION}/${FORMULA}-${VERSION}-x86_64-apple-darwin.tar.gz"
+                sha256 "${SHA256_MACOS_X64}"
+              end
+              if Hardware::CPU.arm?
+                url "https://github.com/${REPO}/releases/download/${VERSION}/${FORMULA}-${VERSION}-aarch64-apple-darwin.tar.gz"
+                sha256 "${SHA256_MACOS_ARM64}"
+              end
+            end
+          
+            on_linux do
+              if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+                url "https://github.com/${REPO}/releases/download/${VERSION}/${FORMULA}-${VERSION}-x86_64-unknown-linux-gnu.tar.gz"
+                sha256 "${SHA256_LINUX_X64}"
+              end
+              if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+                url "https://github.com/${REPO}/releases/download/${VERSION}/${FORMULA}-${VERSION}-aarch64-unknown-linux-gnu.tar.gz"
+                sha256 "${SHA256_LINUX_ARM64}"
+              end
+            end
+          
+            def install
+              # Install all binaries found in the archive
+              Dir.glob("*").each do |file|
+                next if File.directory?(file)
+                next unless File.executable?(file)
+                bin.install file
+              end
+            end
+          
+            test do
+              system "#{bin}/${FORMULA}", "--version"
+            end
+          end
+          EOF
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add Formula/
+          git diff --staged --quiet || git commit -m "Update ${{ github.event.client_payload.formula }} to ${{ github.event.client_payload.version }}"
+          git push
