@@ -4,27 +4,27 @@
 class Mmry < Formula
   desc "A Byteowlz tool"
   homepage "https://github.com/byteowlz/mmry"
-  version "0.7.1"
+  version "0.8.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/byteowlz/mmry/releases/download/v0.7.1/mmry-v0.7.1-x86_64-apple-darwin.tar.gz"
-      sha256 "af38d406e8e796096cb5eefcfc9f87ce330615462aa74d3bce260a269047edbe"
+      url "https://github.com/byteowlz/mmry/releases/download/v0.8.0/mmry-v0.8.0-x86_64-apple-darwin.tar.gz"
+      sha256 "a80230d715c2dde15bcdbaf10c467faa16db764c66306850ee9c1fde03064957"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/byteowlz/mmry/releases/download/v0.7.1/mmry-v0.7.1-aarch64-apple-darwin.tar.gz"
-      sha256 "45b0df41072fa1d5d68400f7b35ebaa05b9e8b1d3de587de639836a1f6e6fb50"
+      url "https://github.com/byteowlz/mmry/releases/download/v0.8.0/mmry-v0.8.0-aarch64-apple-darwin.tar.gz"
+      sha256 "b305e911dfce84011ab95519f47b14cacc832c256b4b68bfcf0df6f539bf3c8c"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/byteowlz/mmry/releases/download/v0.7.1/mmry-v0.7.1-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "db12e4f7a14dc49085deb154dc5025f8ec46f07dd25acd8d3c9bbb9a70ae47a6"
+      url "https://github.com/byteowlz/mmry/releases/download/v0.8.0/mmry-v0.8.0-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "713276207309d5a2ea27e5792a4027694f818bae680d0e22bca89c2d534353d6"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/byteowlz/mmry/releases/download/v0.7.1/mmry-v0.7.1-aarch64-unknown-linux-gnu.tar.gz"
+      url "https://github.com/byteowlz/mmry/releases/download/v0.8.0/mmry-v0.8.0-aarch64-unknown-linux-gnu.tar.gz"
       sha256 ""
     end
   end
