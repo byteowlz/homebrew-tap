@@ -11,7 +11,7 @@ class Sx < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/byteowlz/sx/releases/download/v2.1.0/sx_Darwin_x86_64.tar.gz"
-      sha256 "668a3d6b697e998d25d0e06d5dc1b438690aa253f08d9e5451e60ebe5f5a1276"
+      sha256 "3434bde7d07cd85667e4c81a0273b21c1fe1c2e2afd4a11cf5f654775d5f7aef"
 
       def install
         bin.install "sx"
@@ -19,7 +19,7 @@ class Sx < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/byteowlz/sx/releases/download/v2.1.0/sx_Darwin_arm64.tar.gz"
-      sha256 "1756b802157b02006c291803c27868c562ae60354a527813217298df279db8f7"
+      sha256 "32e1c6dc0f88d16ce4f287d9f4ac931081592c73d28df74c758db6c765453209"
 
       def install
         bin.install "sx"
@@ -30,14 +30,14 @@ class Sx < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/byteowlz/sx/releases/download/v2.1.0/sx_Linux_x86_64.tar.gz"
-      sha256 "8b4b78dbf446c2441a35d66efbe982b7e4cda34f2adfa572d62ff323a006ff0d"
+      sha256 "38876287b837d309c4f90e0c8157c64af03368772517d1e41b4dc43482c5145c"
       def install
         bin.install "sx"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/byteowlz/sx/releases/download/v2.1.0/sx_Linux_arm64.tar.gz"
-      sha256 "91bedc5c3a94e3453c4e235e7fbb60e0230c0f9a00511083616d69d895a394cd"
+      sha256 "8fd03b14196358374c7343a75b86bb78b573afa8139ba72f90cb700db18f294f"
       def install
         bin.install "sx"
       end
