@@ -11,7 +11,7 @@ class Scrpr < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/byteowlz/scrpr/releases/download/v1.1.0/scrpr_Darwin_x86_64.tar.gz"
-      sha256 "5561c0c6f8d5fd82d69f10706c8cdc1de83e4e98e277e64524c161a23ef8b6b6"
+      sha256 "3b9841bbd66dd039be9bbf1b3f302db1aeb5d7c2d1347a36b6829fd8cc64397c"
 
       def install
         bin.install "scrpr"
@@ -19,7 +19,7 @@ class Scrpr < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/byteowlz/scrpr/releases/download/v1.1.0/scrpr_Darwin_arm64.tar.gz"
-      sha256 "6f9d5ded12b4f790e79f85c1714cdf663d27e6f88e0ae0cfdce226fad3b2dd7f"
+      sha256 "510a815121a01872dc7ec0b7af4558f2c02f55d0e8f2a5d8408371d5e441118f"
 
       def install
         bin.install "scrpr"
@@ -30,14 +30,14 @@ class Scrpr < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/byteowlz/scrpr/releases/download/v1.1.0/scrpr_Linux_x86_64.tar.gz"
-      sha256 "821e98ce82041a1c452ea7ca320d817e23336d6824c18b7c95f44dac0a1cf49f"
+      sha256 "3a90bee68451f69761921081200e27dbe38de127c7238097b6087127e7c3278b"
       def install
         bin.install "scrpr"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/byteowlz/scrpr/releases/download/v1.1.0/scrpr_Linux_arm64.tar.gz"
-      sha256 "1c2b2b4c6cc272a9180f6e2a21e66c237d139860db5c7e3a2ec8f8a1a8f74cef"
+      sha256 "299ab40a69fee73dc9e489be8e6c44b6b41ac445b92d74d0307f7b46a5f4e8ff"
       def install
         bin.install "scrpr"
       end
