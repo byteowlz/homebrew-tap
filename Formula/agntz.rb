@@ -10,22 +10,22 @@ class Agntz < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/byteowlz/agntz/releases/download/v0.3.0/agntz-v0.3.0-x86_64-apple-darwin.tar.gz"
-      sha256 "42ff2eb0e689832ce8916391a568837e127b36cf00366907654b51b6b70a0917"
+      sha256 "a7fc1008c1f2b191407fbb5642a7d7a3a583eae23f37db6a727475c3639765e5"
     end
     if Hardware::CPU.arm?
       url "https://github.com/byteowlz/agntz/releases/download/v0.3.0/agntz-v0.3.0-aarch64-apple-darwin.tar.gz"
-      sha256 "1b68f2b3329a18845d8f81e2a34137ab9ecb13b0821c9dbd3a19c1a7826bbd61"
+      sha256 "c420d4d12b4f8e54423389213a53e6a6674597b2c66e23c6f1563f6a91042d67"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/byteowlz/agntz/releases/download/v0.3.0/agntz-v0.3.0-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "db3e9133ebc805cc17ee20c4edd746737e3cad5fd42f707f050d2b248dd484dc"
+      sha256 "b8d6530296fb7cb3e00532fc307fdfee6949006ff53aacb173754656051c45b5"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/byteowlz/agntz/releases/download/v0.3.0/agntz-v0.3.0-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "795e9e0dee90b5b9bac9f833edf1ea5d0cc03fdcaf7e33ae8bc1400039e8fbca"
+      sha256 "6e359a7e6f291a077f5380e4333d8bd0894043a2b7dcfc92ad58fcdda77797aa"
     end
   end
 
