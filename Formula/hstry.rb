@@ -10,22 +10,22 @@ class Hstry < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/byteowlz/hstry/releases/download/v0.5.3/hstry-v0.5.3-x86_64-apple-darwin.tar.gz"
-      sha256 "c8f51f956fc0c08689d0f57bb4513d5b7f1e124cdff90958ce8d2a176581fb2a"
+      sha256 "c5bc944ff5ee2c638e8e199fadf5c95f3cf26d1be94f37333651bc3a0bfa59de"
     end
     if Hardware::CPU.arm?
       url "https://github.com/byteowlz/hstry/releases/download/v0.5.3/hstry-v0.5.3-aarch64-apple-darwin.tar.gz"
-      sha256 "72086b69376b9bd716ab6f86a1d15cd8de5c920748d65ad06d78fd4b3a1e8b4f"
+      sha256 "e4ec2990e3c655a64115eadbbb89551d6e8e5a7f3dc8e364264e66e9661ff337"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/byteowlz/hstry/releases/download/v0.5.3/hstry-v0.5.3-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "87e4eaa8e23e2cbb9b0a98dbb05b215762effc9f770faa0b4e087c8c56afefa3"
+      sha256 "69daff13a7689161c760e185b6ed02a23a101db115604e0e7a08d37fa8193896"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/byteowlz/hstry/releases/download/v0.5.3/hstry-v0.5.3-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "13ec3e33ac28d2c8f5b7322e372e5c952287254d57401a3e1f25093f8237ddeb"
+      sha256 "1a65b29ff7dc6333b3e017014053bc9e908d61eff560a38e4ece6a42198db62e"
     end
   end
 
