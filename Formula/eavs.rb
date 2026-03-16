@@ -4,28 +4,28 @@
 class Eavs < Formula
   desc "A Byteowlz tool"
   homepage "https://github.com/byteowlz/eavs"
-  version "0.5.14"
+  version "0.6.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/byteowlz/eavs/releases/download/v0.5.14/eavs-v0.5.14-x86_64-apple-darwin.tar.gz"
-      sha256 "52e14972dcce4007a17394809bb68d1a0d69fce6becca17b7f7e7a639d02f9f4"
+      url "https://github.com/byteowlz/eavs/releases/download/v0.6.0/eavs-v0.6.0-x86_64-apple-darwin.tar.gz"
+      sha256 "57eb42bf1c245e575ed3adbd055674dd85ec97139b590b779a2da972dae66323"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/byteowlz/eavs/releases/download/v0.5.14/eavs-v0.5.14-aarch64-apple-darwin.tar.gz"
-      sha256 "41d2e3bb8285dd93b6c0b069a29f7622570966a5c3dc0d6c2505feb41c95fc6a"
+      url "https://github.com/byteowlz/eavs/releases/download/v0.6.0/eavs-v0.6.0-aarch64-apple-darwin.tar.gz"
+      sha256 "89ec132fb3e36a3afc9182552b79ce3cf09ae58a019374a77eb15eb5e7ad9b94"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/byteowlz/eavs/releases/download/v0.5.14/eavs-v0.5.14-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "5e96a9abc003ce1f5a328624efa9ac90aae080d0ec8e728a8400214efd79af6a"
+      url "https://github.com/byteowlz/eavs/releases/download/v0.6.0/eavs-v0.6.0-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "fd9edace915703ce487a8a51140364386084a96df7dbb256defea2b838b0ad6e"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/byteowlz/eavs/releases/download/v0.5.14/eavs-v0.5.14-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "8abf993a97704b09068c0d519f4ca6169ca0fe27f0a29574de48e4d8fb62cebf"
+      url "https://github.com/byteowlz/eavs/releases/download/v0.6.0/eavs-v0.6.0-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "b1bc6b7c98dd37642112c2589091adb4d50df992e466b187baadc30b96af68cb"
     end
   end
 
