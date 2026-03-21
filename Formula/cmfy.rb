@@ -4,28 +4,28 @@
 class Cmfy < Formula
   desc "A Byteowlz tool"
   homepage "https://github.com/byteowlz/cmfy"
-  version "0.2.0"
+  version "0.2.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/byteowlz/cmfy/releases/download/v0.2.0/cmfy-v0.2.0-x86_64-apple-darwin.tar.gz"
-      sha256 "f195b247cd04de5abf8cd75842bb2739bbe194661eca4b5da53e2d21f22ea005"
+      url "https://github.com/byteowlz/cmfy/releases/download/v0.2.2/cmfy-v0.2.2-x86_64-apple-darwin.tar.gz"
+      sha256 "8ec041ce22b9dc7622ba5401daab94fc03d279e4600743d143e747acdb5b8301"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/byteowlz/cmfy/releases/download/v0.2.0/cmfy-v0.2.0-aarch64-apple-darwin.tar.gz"
-      sha256 "6f4221006128470cffcd9bb623b39f8a901441268d3cf60eb744c25cd9b040d8"
+      url "https://github.com/byteowlz/cmfy/releases/download/v0.2.2/cmfy-v0.2.2-aarch64-apple-darwin.tar.gz"
+      sha256 "55e29697bcfa611d432b4fd900c62380d1a854c6eb1f4587f02e2f6b2b3b502b"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/byteowlz/cmfy/releases/download/v0.2.0/cmfy-v0.2.0-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "dd11476a30c0a1b3b5add4ac502cb3f1e4f1f743a4df2b9b98de5e86f85077d1"
+      url "https://github.com/byteowlz/cmfy/releases/download/v0.2.2/cmfy-v0.2.2-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "662692df08c4f80542cd82c0d6fc1e5c3aed5c8a9b92f003dd69b72a2b5e483e"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/byteowlz/cmfy/releases/download/v0.2.0/cmfy-v0.2.0-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "ab9483bcbe50e712ed2498a50522680687515eb36a2a814a996d0b3641c6df77"
+      url "https://github.com/byteowlz/cmfy/releases/download/v0.2.2/cmfy-v0.2.2-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "13d851a99b9c358cf3cd1a2110668e899404017570cb5da5d4c264292e4d216b"
     end
   end
 
