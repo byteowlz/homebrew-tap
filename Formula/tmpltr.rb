@@ -10,22 +10,22 @@ class Tmpltr < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/byteowlz/tmpltr/releases/download/v0.3.0/tmpltr-v0.3.0-x86_64-apple-darwin.tar.gz"
-      sha256 "f22da2534fa0a53aa38ccda634c38e5655056905d5cf76bdd9531d2844ffc39a"
+      sha256 "9333230c5b5012e461eb8d9c661d1f6116f1b00bc5f9455b591de7015672faca"
     end
     if Hardware::CPU.arm?
       url "https://github.com/byteowlz/tmpltr/releases/download/v0.3.0/tmpltr-v0.3.0-aarch64-apple-darwin.tar.gz"
-      sha256 "cbb7d033dbc4101b62ec44642945e116e1c7723f1601f61b353a2b6f7b211a9e"
+      sha256 "c3b6ea2a6bc8c76b2978066138cce1dc6f02898119dc9612ecf58cae575e0767"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/byteowlz/tmpltr/releases/download/v0.3.0/tmpltr-v0.3.0-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "95d5b5a380a942774895715f4cae584677abfd5a1bd211e1301fd01c9f33dce4"
+      sha256 "a3d28b3428916257bf28e01431a5bcadeb7780941e58f49e7d60664bcf63ac47"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/byteowlz/tmpltr/releases/download/v0.3.0/tmpltr-v0.3.0-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "29fcb7b2e0df4b1de024e7d7fb12e02263f66ca85567cb51603099978a6f6e68"
+      sha256 "6a2484ee0d6f9a0d6c7fc1faad21fb6d9a3ce35e4081867bd6ba505b70b2f5e1"
     end
   end
 
