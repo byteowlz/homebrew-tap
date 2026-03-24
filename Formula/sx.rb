@@ -5,21 +5,21 @@
 class Sx < Formula
   desc "Multi-engine web search from the command line"
   homepage "https://github.com/byteowlz/sx"
-  version "2.3.0"
+  version "2.4.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/byteowlz/sx/releases/download/v2.3.0/sx_Darwin_x86_64.tar.gz"
-      sha256 "1b3cbf1008944c76024d59a7b276a08fd1b1f266b9c90800de3793ad977b1654"
+      url "https://github.com/byteowlz/sx/releases/download/v2.4.0/sx_Darwin_x86_64.tar.gz"
+      sha256 "1f81254e78a36d9bd0a1c789b5cbeb1e3eb02aad35b266bd639707f22fcda993"
 
       define_method(:install) do
         bin.install "sx"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/byteowlz/sx/releases/download/v2.3.0/sx_Darwin_arm64.tar.gz"
-      sha256 "7ebc2e7dcea0bd8270f5427e42c6a9fc57951a08e8044dd40ee744c1870ed29e"
+      url "https://github.com/byteowlz/sx/releases/download/v2.4.0/sx_Darwin_arm64.tar.gz"
+      sha256 "2c6073818f180e43e7cd81c3740510a1478cfd2c048d6b21695407ae6ce0333c"
 
       define_method(:install) do
         bin.install "sx"
@@ -29,15 +29,15 @@ class Sx < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/byteowlz/sx/releases/download/v2.3.0/sx_Linux_x86_64.tar.gz"
-      sha256 "e2438b0edb27e8de5a30c7b7b608ddbf3e5da57a5efa61f13288c83fdfc2b2cc"
+      url "https://github.com/byteowlz/sx/releases/download/v2.4.0/sx_Linux_x86_64.tar.gz"
+      sha256 "d87fd650bfda668159859e44f18486ef3b2fac493906624f5f4deb02cb589f84"
       define_method(:install) do
         bin.install "sx"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/byteowlz/sx/releases/download/v2.3.0/sx_Linux_arm64.tar.gz"
-      sha256 "5ac6dd004b744419ccee1fbd38eaea3154bb3fb544f102f819cfb9b6ac4d2c7a"
+      url "https://github.com/byteowlz/sx/releases/download/v2.4.0/sx_Linux_arm64.tar.gz"
+      sha256 "10e5a4cf243b6c9cf25e746f6200ae2d4da4a2e0bc9975588c8c8ebafb9fe324"
       define_method(:install) do
         bin.install "sx"
       end
