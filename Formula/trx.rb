@@ -4,28 +4,28 @@
 class Trx < Formula
   desc "lean issue tracker"
   homepage "https://github.com/byteowlz/trx"
-  version "0.5.0"
+  version "0.6"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/byteowlz/trx/releases/download/v0.5.0/trx-v0.5.0-x86_64-apple-darwin.tar.gz"
-      sha256 "38c195779d5f4447b30f73a8ddbc1884a1c90ff513030fc7da8b7ed5716cda11"
+      url "https://github.com/byteowlz/trx/releases/download/v0.6/trx-v0.6-x86_64-apple-darwin.tar.gz"
+      sha256 "1409007e0e8f2b8132e26688ddb2c9afd405236b1cf367ad9686b98d6ad3e08d"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/byteowlz/trx/releases/download/v0.5.0/trx-v0.5.0-aarch64-apple-darwin.tar.gz"
-      sha256 "00185f8df8761379c40683e58e565c6878e3517f86891ce2d43aacc617439463"
+      url "https://github.com/byteowlz/trx/releases/download/v0.6/trx-v0.6-aarch64-apple-darwin.tar.gz"
+      sha256 "115c37b95f49ac06f7642f5417b9a775eb0b60df46cff5462c048520c42bf39d"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/byteowlz/trx/releases/download/v0.5.0/trx-v0.5.0-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "0d201f9eecda734885be93a3653074c493be6f99163af96b48e9ae9e2f5e67e2"
+      url "https://github.com/byteowlz/trx/releases/download/v0.6/trx-v0.6-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "bfafcce72b6ebdbe8d808a51f3c4b1a28c07d85868c38f516e0c28438c4780f6"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/byteowlz/trx/releases/download/v0.5.0/trx-v0.5.0-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "3bd0bd73a8a3bd9a2b712a4e5cc8bf01b3d5d42c4bd11357c251e00697faf6f0"
+      url "https://github.com/byteowlz/trx/releases/download/v0.6/trx-v0.6-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "5c3b6a1c87c5790029b755bcc8d75dba4350108bd3f8f30a2348f04ad20810f8"
     end
   end
 
