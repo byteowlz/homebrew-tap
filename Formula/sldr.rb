@@ -4,28 +4,28 @@
 class Sldr < Formula
   desc "A Byteowlz tool"
   homepage "https://github.com/byteowlz/sldr"
-  version "0.6.1"
+  version "0.6.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/byteowlz/sldr/releases/download/v0.6.1/sldr-v0.6.1-x86_64-apple-darwin.tar.gz"
-      sha256 "e867332dca8973e25096622fdecfa67d2fb364c8045339289a444e02283411bb"
+      url "https://github.com/byteowlz/sldr/releases/download/v0.6.0/sldr-v0.6.0-x86_64-apple-darwin.tar.gz"
+      sha256 "81943fd054bf87f6ed7e0061a4d094b051ad86e4687e7575bc4c83bc50664c03"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/byteowlz/sldr/releases/download/v0.6.1/sldr-v0.6.1-aarch64-apple-darwin.tar.gz"
-      sha256 "2aa7bc0ae84e0bd3c83c7773bf794416bd975173ed39ab8dd1e7e8ab2daea58b"
+      url "https://github.com/byteowlz/sldr/releases/download/v0.6.0/sldr-v0.6.0-aarch64-apple-darwin.tar.gz"
+      sha256 "cae762ce73352c693a17bed953b9341afe7a743e9b60bc7c9919105cb859e09b"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/byteowlz/sldr/releases/download/v0.6.1/sldr-v0.6.1-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "085c3a7031301d122349e45bc2947161579389916f24a5e99a9c659847a5e410"
+      url "https://github.com/byteowlz/sldr/releases/download/v0.6.0/sldr-v0.6.0-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "6c4d2e0cb55c0ba68776fb1f6482afd2dfa76aebb5555afd848d2196618eb9f4"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/byteowlz/sldr/releases/download/v0.6.1/sldr-v0.6.1-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "c36a805e14ab91f5d269bc6927622f92445f0b09d1cc9fb3ef4eb877639da175"
+      url "https://github.com/byteowlz/sldr/releases/download/v0.6.0/sldr-v0.6.0-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "640b73804647f15aca5eb1a1174a60452b6df7b7d4eb91b9bd93e008724eaf73"
     end
   end
 
