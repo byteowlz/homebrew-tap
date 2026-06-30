@@ -4,27 +4,27 @@
 class Tmz < Formula
   desc "making MS teams barely bearable"
   homepage "https://github.com/byteowlz/tmz"
-  version "0.2.5"
+  version "0.2.6"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/byteowlz/tmz/releases/download/v0.2.5/tmz-v0.2.5-x86_64-apple-darwin.tar.gz"
-      sha256 "99115efedeeb8ea7bb75465c50bcdfb131a1b8f8668faf144c437f4505b23ba8"
+      url "https://github.com/byteowlz/tmz/releases/download/v0.2.6/tmz-v0.2.6-x86_64-apple-darwin.tar.gz"
+      sha256 "6e70a3fd3bc9ff0aa2d193b5b2aadea5de5f2aa0603a2f2e833a544b8c025960"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/byteowlz/tmz/releases/download/v0.2.5/tmz-v0.2.5-aarch64-apple-darwin.tar.gz"
-      sha256 "761d83e4d83e4981b68fdff8bd3c2c8a9257473862b2436839f4508bff3e5a3a"
+      url "https://github.com/byteowlz/tmz/releases/download/v0.2.6/tmz-v0.2.6-aarch64-apple-darwin.tar.gz"
+      sha256 "0adf12d5a5e8c93b8fbae9364b58abde3104ac0f18cc1e8cfce9fd4429a7b67d"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/byteowlz/tmz/releases/download/v0.2.5/tmz-v0.2.5-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "280eb91a662ed98afe703f2b1c311452be7f1e568b681dcba75431447f730e16"
+      url "https://github.com/byteowlz/tmz/releases/download/v0.2.6/tmz-v0.2.6-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "cd63a2d1f2111e0a5cc6df9b01bfbdba8fff65475573d3117d69e68b694da190"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/byteowlz/tmz/releases/download/v0.2.5/tmz-v0.2.5-aarch64-unknown-linux-gnu.tar.gz"
+      url "https://github.com/byteowlz/tmz/releases/download/v0.2.6/tmz-v0.2.6-aarch64-unknown-linux-gnu.tar.gz"
       sha256 ""
     end
   end
