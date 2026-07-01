@@ -71,11 +71,16 @@ jobs:
             end
           
             def install
-              # Install all binaries found in the archive
-              Dir.glob("*").each do |file|
-                next if File.directory?(file)
-                next unless File.executable?(file)
-                bin.install file
+              # byt-packaged tarballs stage executables under bin/; older flat
+              # tarballs keep them at the archive root. Support both.
+              if Dir.exist?("bin")
+                bin.install Dir["bin/*"]
+              else
+                Dir.glob("*").each do |file|
+                  next if File.directory?(file)
+                  next unless File.executable?(file)
+                  bin.install file
+                end
               end
             end
           
