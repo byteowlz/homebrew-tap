@@ -10,22 +10,22 @@ class Trx < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/byteowlz/trx/releases/download/v0.6.3/trx-v0.6.3-x86_64-apple-darwin.tar.gz"
-      sha256 "1afdc2bebc053240223b10d39cfedf30ff08e9214dff59c9d687f4c3fc71b2a1"
+      sha256 "2fffaa16e684b695c0beba7622e952e97585e9eea5889903a7f1b5828711306e"
     end
     if Hardware::CPU.arm?
       url "https://github.com/byteowlz/trx/releases/download/v0.6.3/trx-v0.6.3-aarch64-apple-darwin.tar.gz"
-      sha256 "ab8d3fb8a335fa427260d5fbc7c6bb3054680eab05ad319160a12b9651f4a9cc"
+      sha256 "7631c43d16140d0cf2126e5a94f397e558e50d2756bd1708873de055d2a1dfac"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/byteowlz/trx/releases/download/v0.6.3/trx-v0.6.3-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "6994fc9a444da34c81f8b3d81f802ca052be82ba937d14b0c3e29f8e78a4ded4"
+      sha256 "2501ba3e24cdb2056e66f8b88aab91a47844b456ba9fa320e62bdaa6c1ef393b"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/byteowlz/trx/releases/download/v0.6.3/trx-v0.6.3-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "30a8d8c873c88c72fbdabcd2a9df07ae46a929c6f6bea5f67bb2a0d697cf75ba"
+      sha256 "2b402b92af544578a63e61ecd4e7ef8c85218cb7e02735b60af62d749d2f6a91"
     end
   end
 
