@@ -4,28 +4,28 @@
 class Trx < Formula
   desc "lean issue tracker"
   homepage "https://github.com/byteowlz/trx"
-  version "master"
+  version "0.6.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/byteowlz/trx/releases/download/vmaster/trx-vmaster-x86_64-apple-darwin.tar.gz"
-      sha256 "18118a4deaad4b573fb9bf5a27552a4b7715e3e1e4c6c9f13793cdc0f4959c4f"
+      url "https://github.com/byteowlz/trx/releases/download/v0.6.3/trx-v0.6.3-x86_64-apple-darwin.tar.gz"
+      sha256 "1afdc2bebc053240223b10d39cfedf30ff08e9214dff59c9d687f4c3fc71b2a1"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/byteowlz/trx/releases/download/vmaster/trx-vmaster-aarch64-apple-darwin.tar.gz"
-      sha256 "5ff675d50c1cd75ab8e37f9fba7dc10c1ff68d60c546820796de60a2e9f68a4e"
+      url "https://github.com/byteowlz/trx/releases/download/v0.6.3/trx-v0.6.3-aarch64-apple-darwin.tar.gz"
+      sha256 "ab8d3fb8a335fa427260d5fbc7c6bb3054680eab05ad319160a12b9651f4a9cc"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/byteowlz/trx/releases/download/vmaster/trx-vmaster-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "e24226faefa1bd46d4b71a1c6ca85cf0f0260cea7e5d52350da1fe23c17d142e"
+      url "https://github.com/byteowlz/trx/releases/download/v0.6.3/trx-v0.6.3-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "6994fc9a444da34c81f8b3d81f802ca052be82ba937d14b0c3e29f8e78a4ded4"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/byteowlz/trx/releases/download/vmaster/trx-vmaster-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "5403dcd5942c428464f09e1a000ec28e4dce735b713e741e1710f155e025a18f"
+      url "https://github.com/byteowlz/trx/releases/download/v0.6.3/trx-v0.6.3-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "30a8d8c873c88c72fbdabcd2a9df07ae46a929c6f6bea5f67bb2a0d697cf75ba"
     end
   end
 
