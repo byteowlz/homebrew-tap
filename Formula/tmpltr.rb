@@ -4,37 +4,42 @@
 class Tmpltr < Formula
   desc "A Byteowlz tool"
   homepage "https://github.com/byteowlz/tmpltr"
-  version "0.3.1"
+  version "0.3.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/byteowlz/tmpltr/releases/download/v0.3.1/tmpltr-v0.3.1-x86_64-apple-darwin.tar.gz"
-      sha256 "f26a7e868f3884eb70582a6f8e439139715b9b98db036c242e5c3b02f0fff108"
+      url "https://github.com/byteowlz/tmpltr/releases/download/v0.3.2/tmpltr-v0.3.2-x86_64-apple-darwin.tar.gz"
+      sha256 "0a94af98057db7abf1225e377bce90b5174469e3095d6e4aff374dfd3a134581"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/byteowlz/tmpltr/releases/download/v0.3.1/tmpltr-v0.3.1-aarch64-apple-darwin.tar.gz"
-      sha256 "7f5c7b02ff2aff5e24223bd92b7fd9f0f1fa20cb4e1b678ebab1bef20777dcc7"
+      url "https://github.com/byteowlz/tmpltr/releases/download/v0.3.2/tmpltr-v0.3.2-aarch64-apple-darwin.tar.gz"
+      sha256 "bbadeeb9e05d092085c653c70a2f19a5c303ee0453ea60c9e853a9367a2747a2"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/byteowlz/tmpltr/releases/download/v0.3.1/tmpltr-v0.3.1-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "26e8882bddbef2a1803f20e9a913f06815daa1bda80e3d6c6f9f54addbc694a0"
+      url "https://github.com/byteowlz/tmpltr/releases/download/v0.3.2/tmpltr-v0.3.2-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "4adb6f828fd8cda9f1a5796491a77f52405ec64818021a04bf5dca64ac52c937"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/byteowlz/tmpltr/releases/download/v0.3.1/tmpltr-v0.3.1-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "0079d084cdfacb4b2f2a8ed5c3618c5d768e3273cc8d5c69a0d648c0126e2d0b"
+      url "https://github.com/byteowlz/tmpltr/releases/download/v0.3.2/tmpltr-v0.3.2-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "fd9ddbb31b1baf6f155bd67795e881d75c58e870961e201cac4722b51222cac0"
     end
   end
 
   def install
-    # Install all binaries found in the archive
-    Dir.glob("*").each do |file|
-      next if File.directory?(file)
-      next unless File.executable?(file)
-      bin.install file
+    # byt-packaged tarballs stage executables under bin/; older flat
+    # tarballs keep them at the archive root. Support both.
+    if Dir.exist?("bin")
+      bin.install Dir["bin/*"]
+    else
+      Dir.glob("*").each do |file|
+        next if File.directory?(file)
+        next unless File.executable?(file)
+        bin.install file
+      end
     end
   end
 
