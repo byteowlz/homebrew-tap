@@ -4,37 +4,42 @@
 class Sldr < Formula
   desc "A Byteowlz tool"
   homepage "https://github.com/byteowlz/sldr"
-  version "0.7.0"
+  version "0.8.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/byteowlz/sldr/releases/download/v0.7.0/sldr-v0.7.0-x86_64-apple-darwin.tar.gz"
-      sha256 "844ecc9c1f251e37681d1402f637eb79131c7a3b790a19307cbe4625b49f2c32"
+      url "https://github.com/byteowlz/sldr/releases/download/v0.8.1/sldr-v0.8.1-x86_64-apple-darwin.tar.gz"
+      sha256 "a7f0f4aacb8e066841c30e05180deb010af62506ccee0d92ac88971ccb455101"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/byteowlz/sldr/releases/download/v0.7.0/sldr-v0.7.0-aarch64-apple-darwin.tar.gz"
-      sha256 "1d8019b42b75a74d476c2c949898d00d686a27ab7d00a267ebb54eaa1de7ec10"
+      url "https://github.com/byteowlz/sldr/releases/download/v0.8.1/sldr-v0.8.1-aarch64-apple-darwin.tar.gz"
+      sha256 "aaf331bbee8fdac6769ccd05a559b208b8e1f8bd2f83e45b83ae54a15b7900fc"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/byteowlz/sldr/releases/download/v0.7.0/sldr-v0.7.0-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "4667b3382e3753021177484f73c372b041440c50e055e6649724bc3df753d4f1"
+      url "https://github.com/byteowlz/sldr/releases/download/v0.8.1/sldr-v0.8.1-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "1713552e3506057952993f718ecaa99fa186ae3b076f97838958dff3342a6aa1"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/byteowlz/sldr/releases/download/v0.7.0/sldr-v0.7.0-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "421a47298875de91a77b7d7259ed15ee2e0c073d220bbfda7c14cfe69948217b"
+      url "https://github.com/byteowlz/sldr/releases/download/v0.8.1/sldr-v0.8.1-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "35b27d0c724219b2d8ac3da54dd8c7e99968c4bf84581b2305d351eb0cdafd26"
     end
   end
 
   def install
-    # Install all binaries found in the archive
-    Dir.glob("*").each do |file|
-      next if File.directory?(file)
-      next unless File.executable?(file)
-      bin.install file
+    # byt-packaged tarballs stage executables under bin/; older flat
+    # tarballs keep them at the archive root. Support both.
+    if Dir.exist?("bin")
+      bin.install Dir["bin/*"]
+    else
+      Dir.glob("*").each do |file|
+        next if File.directory?(file)
+        next unless File.executable?(file)
+        bin.install file
+      end
     end
   end
 
