@@ -10,22 +10,22 @@ class Skdlr < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/byteowlz/skdlr/releases/download/v0.2.7/skdlr-v0.2.7-x86_64-apple-darwin.tar.gz"
-      sha256 "29336f9a0caef178630eb43befdb63388f2a0afca66e4583031602a79f01bf70"
+      sha256 "5f7cbe772ae1cd7960bfa5c2a780ca0033e6e44bdd55416a14f1ba6cb0c23c36"
     end
     if Hardware::CPU.arm?
       url "https://github.com/byteowlz/skdlr/releases/download/v0.2.7/skdlr-v0.2.7-aarch64-apple-darwin.tar.gz"
-      sha256 "945a39c7d97953a2fead6caba21a3b2928ad0447c31e7380845af575e2ae04d8"
+      sha256 "c0b32167398b6932b29fe1f85b8cf02003b0f587331d4bb5c8292616c7993793"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/byteowlz/skdlr/releases/download/v0.2.7/skdlr-v0.2.7-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "7ff933c92a709ab9cf1813b4a782e9aa67ed6889fdd68205d29aee9f2c925250"
+      sha256 "e22ea165d751c9d206d9c792ad65b160f1dcb3d7eb8ce40551dabc28ee388949"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/byteowlz/skdlr/releases/download/v0.2.7/skdlr-v0.2.7-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "caa61b2e02e887040e1dc598af3a99d288df7af274ef16a15c0cc7b1dea15ac2"
+      sha256 "271bd2d3b764ad12002973f602f123997e12c58d1807c41d47cbc375741a0714"
     end
   end
 
