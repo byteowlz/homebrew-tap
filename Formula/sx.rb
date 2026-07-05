@@ -4,28 +4,28 @@
 class Sx < Formula
   desc "use searxng from the command line"
   homepage "https://github.com/byteowlz/sx"
-  version "2.4.2"
+  version "2.5.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/byteowlz/sx/releases/download/v2.4.2/sx-v2.4.2-x86_64-apple-darwin.tar.gz"
-      sha256 "7d47e02ba623db6df2899e7e1b2034c06b975f4846dd7469a851ff0fdbb4cbae"
+      url "https://github.com/byteowlz/sx/releases/download/v2.5.0/sx-v2.5.0-x86_64-apple-darwin.tar.gz"
+      sha256 "69f1c2d4dc919c5c90a28ec05b224758856df69090f982a1248b776d04fd56e2"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/byteowlz/sx/releases/download/v2.4.2/sx-v2.4.2-aarch64-apple-darwin.tar.gz"
-      sha256 "b2958c63bb4370c2e4316e6e9ce7c97b3626ca0fea0e265feec473d514c36f7b"
+      url "https://github.com/byteowlz/sx/releases/download/v2.5.0/sx-v2.5.0-aarch64-apple-darwin.tar.gz"
+      sha256 "e6ee86e8bae8d41e2ac3686f069d046de7be2f3623bd880e54bac440c2fb2538"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/byteowlz/sx/releases/download/v2.4.2/sx-v2.4.2-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "3e59ee5233456f0cf5efd7ac443e536fbc944a1dd1891caf19fe1da149a3442f"
+      url "https://github.com/byteowlz/sx/releases/download/v2.5.0/sx-v2.5.0-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "7fbb48578c737d60dadaeae1c9181ba208c8e5e2f4451d0a7799289c98d36e58"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/byteowlz/sx/releases/download/v2.4.2/sx-v2.4.2-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "a2ccaea4da8676cf73e631e5eda6895518435bbd2feb1d2a3ca9bff3af55e8a3"
+      url "https://github.com/byteowlz/sx/releases/download/v2.5.0/sx-v2.5.0-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "cf40b0f3a1599ce01386871bf45484b4087a3ced5974579d0203aadfa427807f"
     end
   end
 
