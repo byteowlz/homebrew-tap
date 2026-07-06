@@ -10,22 +10,22 @@ class Scrpr < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/byteowlz/scrpr/releases/download/v1.1.1/scrpr-v1.1.1-x86_64-apple-darwin.tar.gz"
-      sha256 "019ef571e015f5c747e190272ad4aaad48a7661abc2351eef968196d7d29ab57"
+      sha256 "60346c6d26222c486b1487741942a83e26fd591c26315241ff39aa5875807157"
     end
     if Hardware::CPU.arm?
       url "https://github.com/byteowlz/scrpr/releases/download/v1.1.1/scrpr-v1.1.1-aarch64-apple-darwin.tar.gz"
-      sha256 "5f4fd8dc9a8b635b712642d4bd68b7caf7d5761a820dce230ffc7b97184ca413"
+      sha256 "5f93c8e8702f892858f6559da8fbd8e248007589bb37e7307faf4c8bce695df9"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/byteowlz/scrpr/releases/download/v1.1.1/scrpr-v1.1.1-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "ffc93f0ffd1f8e2300c1fbe676733d8a8176bb28b111e3e1d66451e450c49310"
+      sha256 "a06ca42a8a5951470ef3fab83ca8148464ae842bc5d52b17c083f780a30b3f3d"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/byteowlz/scrpr/releases/download/v1.1.1/scrpr-v1.1.1-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "155733c76ad7d399d3b5c0b0e80628d476912cd0fe70d701b575552a4c2368ef"
+      sha256 "4c851081317c7eaac540a79c8896782bb37e6711cf1ec6d865257bb1739e429f"
     end
   end
 
