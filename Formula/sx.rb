@@ -10,22 +10,22 @@ class Sx < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/byteowlz/sx/releases/download/v2.5.0/sx-v2.5.0-x86_64-apple-darwin.tar.gz"
-      sha256 "69f1c2d4dc919c5c90a28ec05b224758856df69090f982a1248b776d04fd56e2"
+      sha256 "ec54744e938d8ca6703e3b0779a67c08472582145337b0d3107467f853e2fcfc"
     end
     if Hardware::CPU.arm?
       url "https://github.com/byteowlz/sx/releases/download/v2.5.0/sx-v2.5.0-aarch64-apple-darwin.tar.gz"
-      sha256 "e6ee86e8bae8d41e2ac3686f069d046de7be2f3623bd880e54bac440c2fb2538"
+      sha256 "cf1b8cf3baa477eae1825d52358ca311ca420b53adf53897c641d882daa6ce48"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/byteowlz/sx/releases/download/v2.5.0/sx-v2.5.0-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "7fbb48578c737d60dadaeae1c9181ba208c8e5e2f4451d0a7799289c98d36e58"
+      sha256 "668c920d27f32d27d4226b3ac1816820bc22da1c8356714af1820c392c7c66af"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/byteowlz/sx/releases/download/v2.5.0/sx-v2.5.0-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "cf40b0f3a1599ce01386871bf45484b4087a3ced5974579d0203aadfa427807f"
+      sha256 "2a69bc7af43511f7c3b822e682a79db0b40c1080da60929754401b8faa33775c"
     end
   end
 
