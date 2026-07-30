@@ -4,28 +4,28 @@
 class Scrpr < Formula
   desc "Get main text from websites in the cli"
   homepage "https://github.com/byteowlz/scrpr"
-  version "1.1.1"
+  version "1.1.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/byteowlz/scrpr/releases/download/v1.1.1/scrpr-v1.1.1-x86_64-apple-darwin.tar.gz"
-      sha256 "60346c6d26222c486b1487741942a83e26fd591c26315241ff39aa5875807157"
+      url "https://github.com/byteowlz/scrpr/releases/download/v1.1.2/scrpr-v1.1.2-x86_64-apple-darwin.tar.gz"
+      sha256 "8387c9604f4d7fe405cb15e4b9208d01e47df82b3691ef99d3afc070c78e7460"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/byteowlz/scrpr/releases/download/v1.1.1/scrpr-v1.1.1-aarch64-apple-darwin.tar.gz"
-      sha256 "5f93c8e8702f892858f6559da8fbd8e248007589bb37e7307faf4c8bce695df9"
+      url "https://github.com/byteowlz/scrpr/releases/download/v1.1.2/scrpr-v1.1.2-aarch64-apple-darwin.tar.gz"
+      sha256 "2931b2a0332a79df1cc5561e8863c7674de2acdfe9024f7618bc30634d0dcd2a"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/byteowlz/scrpr/releases/download/v1.1.1/scrpr-v1.1.1-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "a06ca42a8a5951470ef3fab83ca8148464ae842bc5d52b17c083f780a30b3f3d"
+      url "https://github.com/byteowlz/scrpr/releases/download/v1.1.2/scrpr-v1.1.2-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "be4df1ee799b8679e8de4431ae46203bb7f03be042e5226b5c3ac5453b8d7fa6"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/byteowlz/scrpr/releases/download/v1.1.1/scrpr-v1.1.1-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "4c851081317c7eaac540a79c8896782bb37e6711cf1ec6d865257bb1739e429f"
+      url "https://github.com/byteowlz/scrpr/releases/download/v1.1.2/scrpr-v1.1.2-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "204fad2d156f44d44a8118b2e31ef3cd6d0976db7a1470c45cb76cd40590d424"
     end
   end
 
