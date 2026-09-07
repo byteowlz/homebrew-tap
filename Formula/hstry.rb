@@ -4,28 +4,28 @@
 class Hstry < Formula
   desc "a unified history for all your agents"
   homepage "https://github.com/byteowlz/hstry"
-  version "0.5.24"
+  version "0.5.25"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/byteowlz/hstry/releases/download/v0.5.24/hstry-v0.5.24-x86_64-apple-darwin.tar.gz"
-      sha256 "4f3ed8221e71043f9bba03c18eac6a0e387ca6951721de065fb34894cd10f9b8"
+      url "https://github.com/byteowlz/hstry/releases/download/v0.5.25/hstry-v0.5.25-x86_64-apple-darwin.tar.gz"
+      sha256 "43ccb5fa7ff6676e9b90ea4f7c08892745ba1de2b05283345a8f1921fa7a954b"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/byteowlz/hstry/releases/download/v0.5.24/hstry-v0.5.24-aarch64-apple-darwin.tar.gz"
-      sha256 "32bc3ed7729ac4eb7859e4c0d042349ff07f8eeb679102a32a9f3bb87e66be7d"
+      url "https://github.com/byteowlz/hstry/releases/download/v0.5.25/hstry-v0.5.25-aarch64-apple-darwin.tar.gz"
+      sha256 "92effac22b33ec9e63119bc14d928061edf3ea01d830da3317b6ba4fa7cf27bc"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/byteowlz/hstry/releases/download/v0.5.24/hstry-v0.5.24-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "80bf6afd62928e9737185bfba85d651f1e0439140fd0eadcb005c5fb18bd2700"
+      url "https://github.com/byteowlz/hstry/releases/download/v0.5.25/hstry-v0.5.25-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "d6af2fea969c1ad8c091552a6623ed73b82d9ec4bf1c8f76326c77b82890a26d"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/byteowlz/hstry/releases/download/v0.5.24/hstry-v0.5.24-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "008d85004ac81091934cbcc6292dff2532a29be9664341f97360b696541ec25e"
+      url "https://github.com/byteowlz/hstry/releases/download/v0.5.25/hstry-v0.5.25-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "332255fddfabf3c035348359698bd61c58d8598b34747d0d6ddc135f55c959a1"
     end
   end
 
