@@ -4,28 +4,28 @@
 class Skdlr < Formula
   desc "Cross-platform task scheduler with native OS integration"
   homepage "https://github.com/byteowlz/skdlr"
-  version "0.2.8"
+  version "0.3.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/byteowlz/skdlr/releases/download/v0.2.8/skdlr-v0.2.8-x86_64-apple-darwin.tar.gz"
-      sha256 "c514543b1287446426108e76a0728480613402bf42c650530a5dd7de67d75926"
+      url "https://github.com/byteowlz/skdlr/releases/download/v0.3.0/skdlr-v0.3.0-x86_64-apple-darwin.tar.gz"
+      sha256 "9d2bbf6b032e4e12a307a3f45d6be6dfefd605953a6ba2212a0881af7db4db10"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/byteowlz/skdlr/releases/download/v0.2.8/skdlr-v0.2.8-aarch64-apple-darwin.tar.gz"
-      sha256 "9c0017f9f5d1f2427987fc874b4a0946924bb3869d8d291550e4a6131a38f04a"
+      url "https://github.com/byteowlz/skdlr/releases/download/v0.3.0/skdlr-v0.3.0-aarch64-apple-darwin.tar.gz"
+      sha256 "8717e8708dd752d1101bb720aac8ebe3ecc9147ca6b80cdd45fd4a13401dc58c"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/byteowlz/skdlr/releases/download/v0.2.8/skdlr-v0.2.8-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "6979fc4d66aeadff86457c64459d3f2746c84288794a0092b55099d86412467e"
+      url "https://github.com/byteowlz/skdlr/releases/download/v0.3.0/skdlr-v0.3.0-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "4c23846664cf831f594d707e1dbb4166d39ba5d6b04c8321082544a1a2a77439"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/byteowlz/skdlr/releases/download/v0.2.8/skdlr-v0.2.8-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "a07bc145640ab3899794e41360e5b1a362ef9385ff30de706d65fbb09692fa10"
+      url "https://github.com/byteowlz/skdlr/releases/download/v0.3.0/skdlr-v0.3.0-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "b1c09c120200980f8dec6f48293ff3de3e9238c6f2ca5034f20fd07c9b0fb1da"
     end
   end
 
